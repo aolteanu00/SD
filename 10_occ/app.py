@@ -3,7 +3,7 @@ import random
 from flask import Flask, render_template
 app = Flask(__name__)
 
-#code to read a csv and convert into dictionary
+#code to read a csv and convert into dictionary 
 OCCUPATIONS = {}
 with open('./static/occupations.csv') as csv_file:  # open CSV file
     # instantiate CSV reader object
