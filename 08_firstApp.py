@@ -18,7 +18,6 @@ def sleep():
 def brush():
     return "pearly whites!"
     
-
 if __name__ == "__main__":
     app.debug = True
     app.run()
