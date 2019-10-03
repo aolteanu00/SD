@@ -21,6 +21,17 @@
          <br>
          <input type = "submit" name = "sub1" value = "submit">
       </form>
+<br>
+<br>
+      {% if error %}
+        {% if userw != "alex" %}
+        {{ "wrong username" }}
+        {% endif %}
+
+        {% if passw != "pass" %}
+        {{ "wrong password" }}
+        {% endif %}
+      {% endif %}
 
     </body>
 
