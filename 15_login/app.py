@@ -11,6 +11,10 @@ import os
 app = Flask(__name__)
 app.secret_key = os.urandom(32)
 
+#hardcoded correct login information
+username = "alex"
+password = "pass"
+
 #initial route, renders home.html/our login page
 @app.route("/")
 def login():
@@ -23,19 +27,11 @@ def login():
     global passw
     passw = ""
 
-    #hardcoded correct login information
-    username = "alex"
-    password = "pass"
-
     return render_template('home.html', error = entered)
 
 @app.route("/welcome")
 def stuff():
     entered = False #reset entered variable
-
-    #hardcode correct login information
-    username = "alex"
-    password = "pass"
 
     #necessary form stuff
     print(request.form)
@@ -56,10 +52,6 @@ def stuff():
 
 @app.route("/oops")
 def elogin():
-    #hardcoded correct login information
-    username = "alex"
-    password = "pass"
-
     #set entered to true, user submitted incorrect login information
     entered = True
 
