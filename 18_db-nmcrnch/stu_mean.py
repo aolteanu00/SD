@@ -10,6 +10,7 @@ db = sqlite3.connect("glit.db") #open if file exists, otherwise create
 c = db.cursor()               #facilitate db ops
 
 #==========================================================
+#create table
 command = "CREATE TABLE stu_mean(name TEXT, id INTEGER, average INTEGER);"
 c.execute(command) # run SQL statement
 
@@ -36,6 +37,7 @@ def fetchName(id):
         if row[2] == id:
             return(row[0])
 
+#insert data into table
 def insertData(id):
     command = "INSERT INTO stu_mean(name,id,average) VALUES" + "(" + "'" + str(fetchName(id)) + "'" + "," + str(id) + "," + str(calcAvg(id)) + ");"
     c.execute(command)
@@ -51,29 +53,11 @@ insertData(8)
 insertData(9)
 insertData(10)
 
-
+#prints table
 select = "SELECT * FROM stu_mean"
 stuff = c.execute(select)
 for row in stuff:
     print(row)
-
-
-
-
-
-
-#CODE SNIPPET
-#command = "SELECT * FROM students"
-#c.execute(command)
-#data = c.fetchall()
-#for row in data:
-#    print(row[1])
-
-#CODE SNIPPET
-#command = "SELECT name FROM students LIMIT 0,1;"
-#c.execute(command)
-#test = c.fetchall()
-#print(test)
 
 
 
