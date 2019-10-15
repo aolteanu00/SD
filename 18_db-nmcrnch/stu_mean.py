@@ -1,4 +1,4 @@
-#Alex Olteanu
+#Alex Olteanu and Alex Thompson
 #SoftDev Period 2
 #Oct 2019
 
@@ -37,7 +37,7 @@ def fetchName(id):
         if row[2] == id:
             return(row[0])
 
-#insert data into table
+#insert data into table given an id
 def insertData(id):
     command = "INSERT INTO stu_mean(name,id,average) VALUES" + "(" + "'" + str(fetchName(id)) + "'" + "," + str(id) + "," + str(calcAvg(id)) + ");"
     c.execute(command)
@@ -58,9 +58,6 @@ select = "SELECT * FROM stu_mean"
 stuff = c.execute(select)
 for row in stuff:
     print(row)
-
-
-
 #==========================================================
 
 db.commit() #save changes
