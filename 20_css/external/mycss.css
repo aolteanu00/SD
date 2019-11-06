@@ -1,0 +1,26 @@
+body {
+  background-color: lightblue;
+  word-spacing: 50px;
+}
+
+h1 {
+  color: navy;
+  text-shadow: 3px 2px white;
+  text-align: right;
+}
+
+h2 {
+  color: navy;
+  text-shadow: 3px 2px white;
+  text-align: right;
+}
+
+h3{
+  color:navy;
+  text-shadow: 3px 2px white;
+  text-align: right;
+}
+
+p{
+  text-shadow: 3px 2px red;
+}

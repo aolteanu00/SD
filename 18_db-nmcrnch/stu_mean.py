@@ -35,6 +35,7 @@ def fetchName(id):
     data = c.fetchall()
     for row in data:
         if row[2] == id:
+            print(row[0])
             return(row[0])
 
 #insert data into table given an id
