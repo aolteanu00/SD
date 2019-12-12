@@ -37,46 +37,46 @@ var randomStudent = function() {
 }
 //-----------------------------------------------------------------------------
 //PRINTING fact(5)
-var test = document.getElementById("a");
-function firstCons() {
+var test1 = document.getElementById("a");
+function firstCons1() {
   console.log(fact(5));
 }
-function firstPage() {
+function firstPage1() {
   document.write(fact(5));
 }
-test.addEventListener("click", firstCons);
-test.addEventListener("click", firstPage);
+test1.addEventListener("click", firstCons1);
+test1.addEventListener("click", firstPage1);
 
 //PRINTING fib(5)
-var test = document.getElementById("b");
-function firstCons() {
+var test2 = document.getElementById("b");
+function firstCons2() {
   console.log(fib(5));
 }
-function firstPage() {
+function firstPage2() {
   document.write(fib(5));
 }
-test.addEventListener("click", firstCons);
-test.addEventListener("click", firstPage);
+test2.addEventListener("click", firstCons2);
+test2.addEventListener("click", firstPage2);
 
 //PRINTING gcd(10,15)
-var test = document.getElementById("c");
-function firstCons() {
+var test3 = document.getElementById("c");
+function firstCons3() {
   console.log(gcd(10,15));
 }
-function firstPage() {
+function firstPage3() {
   document.write(gcd(10,15));
 }
-test.addEventListener("click", firstCons);
-test.addEventListener("click", firstPage);
+test3.addEventListener("click", firstCons3);
+test3.addEventListener("click", firstPage3);
 
 //PRINTING randomStudent()
-var test = document.getElementById("d");
+var test4 = document.getElementById("d");
 var ans = randomStudent();
-function firstCons() {
+function firstCons4() {
   console.log(ans);
 }
-function firstPage() {
+function firstPage4() {
   document.write(ans);
 }
-test.addEventListener("click", firstCons);
-test.addEventListener("click", firstPage);
+test4.addEventListener("click", firstCons4);
+test4.addEventListener("click", firstPage4);
