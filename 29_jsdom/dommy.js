@@ -1,22 +1,25 @@
 //changes heading of html file
 var changeHeading = function(e) {
   var h = document.getElementById("h");
-  h.innerHTML = e.innerHTML;
+  h.innerHTML = e.target.innerHTML;
 };
 
 //removes an item from regular list
 var removeItem = function(e) {
+  e.target.remove();
 };
 
 //dynamic list items
 var lis = document.getElementsByTagName("li");
 
-// for (var i=0; i<lis.length; i++) {
-//   console.log(lis[i].textContent);
-//   lis[i].addEventListener('click', changeHeading(lis[i]));
-//   lis[i].addEventListener('mouseout',  changeHeading(lis[i]));
-//   lis[i].addEventListener('click', changeHeading(lis[i]));
-// };
+for (var i=0; i<lis.length; i++) {
+  console.log(lis[i].textContent);
+  lis[i].addEventListener('mouseover', changeHeading);
+  lis[i].addEventListener('mouseout', () => {
+    document.getElementById("h").innerHTML = "Hello World!";
+  });
+  lis[i].addEventListener('click', removeItem);
+};
 
 
 
@@ -35,6 +38,8 @@ var addItem = function(e) {
   console.log(currentItem);
   item.appendChild(document.createTextNode(currentItem));
   list.appendChild(item);
+  item.addEventListener('mouseover', changeHeading);
+  item.addEventListener('click', removeItem);
 };
 
 var button = document.getElementById("b");
@@ -61,12 +66,19 @@ var addFib = function(e) {
   currentTerm += 1;
 };
 
-// var addFib2 = function(e) {
-//   console.log(e);
-//   ???
-//   ...
-//   ???
-// }
+var addFib2 = function(e) {
+    var lis = document.getElementById("fiblist");
+    var ch = lis.childNodes;
+    var item = document.createElement("li");
+    var len = children.length;
+
+    if (len > 2) {
+	     item.innerHTML = parseInt(ch[len - 2].innerHTML) + parseInt(ch[len - 1].innerHTML);
+    } else {
+	     item.innerHTML = "1";
+    }
+    lis.appendChild(item);
+}
 
 var fb = document.getElementById("fb");
 fb.addEventListener("click", addFib);
